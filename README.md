@@ -1,1 +1,0 @@
-[https://gerasik.github.io/rsschool-cv/cv](https://gerasik.github.io/rsschool-cv/cv)
