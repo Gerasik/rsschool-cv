@@ -34,6 +34,7 @@ Link to some of my work: [github.com/Gerasik](https://github.com/Gerasik)
 - University: Belarusian State University of Informatics and Radioelectronics
     - Faculty: Computer Design
     - Speciality: Electronic Security Systems
+- RS School 2019Q1
 
 ## English Skills
 
