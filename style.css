@@ -1,16 +1,18 @@
 body{
     width: 1024px;
     margin: 0 auto;
+    background-color: #E0F4E9;
 }
 
 header,
 main{
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 header{
-    grid-template-areas: "photo phones phones";
+    grid-template-areas: "photo name contacts";
+    color: #30362F;
 }
 
 header img{
@@ -18,15 +20,9 @@ header img{
     width: 100%;
 }
 
-header div{
-    grid-area: phones;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 header .name{
     text-align: center;
+    grid-area: name;
 }
 
 header .contact-list{
@@ -34,17 +30,18 @@ header .contact-list{
     padding: 0;
     margin: 0;
     text-align: center;
+    grid-area: contacts;
 }
 
-header .contact-list a{
-    color: black;
+a{
     text-decoration: none;
-    position: relative;
     margin: 10px;
+    color: #303676;
+    position: relative;
 }
 
-header .contact-list a::before,
-header .contact-list a::after{
+a::before,
+a::after{
     content: '';
     position: absolute;
     height: 1px;
@@ -54,16 +51,16 @@ header .contact-list a::after{
     transition: all 0.7s cubic-bezier(0.25, 0.1, 0.5, 2);
 }
 
-header .contact-list a::before{
+a::before{
     left: 50%;
 }
 
-header .contact-list a::after{
+a::after{
     right: 50%;
 }
 
-header .contact-list a:hover::before,
-header .contact-list a:hover::after{
+a:hover::before,
+a:hover::after{
     width: 50%;
 }
 
@@ -76,12 +73,29 @@ main{
 }
 
 main article{
-    padding: 10px;
-    border: 1px solid black;
+    padding: 15px;
+}
+
+main article * {
+    margin: 0;  
+}
+
+main article h2{
+    text-transform: uppercase;
+    color: #30362F;
+    text-decoration: underline;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+main article p,
+main article ul {
+    margin: 5px 0;
 }
 
 main .summary{
     grid-area: summary;
+    background-color: #B8D4BD;
 }
 
 main .skills{
@@ -90,16 +104,25 @@ main .skills{
 
 main .examples{
     grid-area: examples;
+    background-color: #DEFEFF;
 }
 
 main .work{
     grid-area: work;
+    background-color: #C1DED6;
 }
 
 main .education{
     grid-area: education;
+    background-color: #C1DED6;
 }
 
 main .languages{
     grid-area: languages;
+    background-color: #B8D4BD;
+}
+
+footer{
+    margin: 25px 0;
+    text-align: right;
 }
